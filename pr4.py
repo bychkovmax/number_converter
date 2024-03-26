@@ -1,20 +1,19 @@
 def text2int(textnum, numwords={}):
     if not numwords:
-        units = [
-            "ноль", "один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь",
-            "девять", "десять", "одиннадцать", "двенадцать", "тринадцать", "четырнадцать", "пятнадцать",
-            "шестнадцать", "семнадцать", "восемнадцать", "девятнадцать",
-        ]
+      units = [
+        "ноль", "один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь",
+        "девять", "десять", "одиннадцать", "двенадцать", "тринадцать", "четырнадцать", "пятнадцать",
+        "шестнадцать", "семнадцать", "восемнадцать", "девятнадцать",
+      ]
 
-        tens = ["", "", "двадцать", "тридцать", "сорок", "пятьдесят", "шестьдесят", "семьдесят", "восемьдесят",
-                "девяносто"]
+      tens = ["", "", "двадцать", "тридцать", "сорок", "пятьдесят", "шестьдесят", "семьдесят", "восемьдесят", "девяносто"]
 
-        scales = ["сто", "тысяч", "миллион", "миллиард", "триллион"]
+      scales = ["сто", "тысяч", "миллион", "миллиард", "триллион"]
 
-        numwords["и"] = (1, 0)
-        for idx, word in enumerate(units):    numwords[word] = (1, idx)
-        for idx, word in enumerate(tens):     numwords[word] = (1, idx * 10)
-        for idx, word in enumerate(scales):   numwords[word] = (10 ** (idx * 3 or 2), 0)
+      numwords["и"] = (1, 0)
+      for idx, word in enumerate(units):    numwords[word] = (1, idx)
+      for idx, word in enumerate(tens):     numwords[word] = (1, idx * 10)
+      for idx, word in enumerate(scales):   numwords[word] = (10 ** (idx * 3 or 2), 0)
 
     current = result = 0
     for word in textnum.split():
@@ -27,9 +26,7 @@ def text2int(textnum, numwords={}):
 
     return result + current
 
-# Test
-# print (text2int("двадцать тысяч пятьдесят три"))
-
-# print (text2int("сто двадцать один"))
-
-# print (text2int("сто"))
+with open('file.txt',"r", encoding="UTF-8") as file:
+    for line in file:
+        print(line, " - ", text2int(line.lower()))
+        
