@@ -13,3 +13,4 @@ Tекст “сто одиннадцать тысяч фиолетовых ол�
 Считается, что числа прописью написаны без ошибок в грамматике, падеже и т. д. 
 
 COVERALLS_REPO_TOKEN=jPngoJY3eq6Er2abGtZ8uOud8Zt7Avv9C
+<a href='https://coveralls.io/github/bychkovmax/number_converter?branch=main'><img src='https://coveralls.io/repos/github/bychkovmax/number_converter/badge.svg?branch=main' alt='Coverage Status' /></a>
