@@ -31,3 +31,4 @@ with open('file.txt',"r", encoding="UTF-8") as file:
         print(line, " - ", text2int(line.lower()))
 
 print()
+print()
