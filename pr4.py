@@ -29,4 +29,5 @@ def text2int(textnum, numwords={}):
 with open('file.txt',"r", encoding="UTF-8") as file:
     for line in file:
         print(line, " - ", text2int(line.lower()))
-        
+
+print()
